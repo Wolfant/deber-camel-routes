@@ -10,6 +10,7 @@ export class FacturaController {
   @Post()
   create(@Body() createFacturaDto: CreateFacturaDto) {
     this.facturaService.create(createFacturaDto);
+    console.log('save');
     return HttpCode(200);
   }
 
